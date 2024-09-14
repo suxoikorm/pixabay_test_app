@@ -1,2 +1,1 @@
-# pixabay_test_app
- 
+Deleted windows, macos, linux and web apps
