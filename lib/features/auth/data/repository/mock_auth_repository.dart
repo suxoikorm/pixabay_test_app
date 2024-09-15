@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:pixabay_test_app/app/domain/app_exception.dart';
+import 'package:pixabay_test_app/app/domain/model/app_exception.dart';
 import 'package:pixabay_test_app/features/auth/domain/model/auth_repository.dart';
 
 @Injectable(as: AuthRepository)

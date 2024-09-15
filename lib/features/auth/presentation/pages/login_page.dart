@@ -8,7 +8,7 @@ import 'package:pixabay_test_app/features/auth/domain/bloc/login_cubit.dart';
 import 'package:pixabay_test_app/features/auth/domain/model/auth_repository.dart';
 import 'package:pixabay_test_app/features/auth/domain/model/login_state.dart';
 import 'package:pixabay_test_app/ui/app_button.dart';
-import 'package:pixabay_test_app/utils/email_validator.dart';
+import 'package:pixabay_test_app/utils/validator.dart';
 
 @RoutePage()
 class LoginPage extends StatefulWidget implements AutoRouteWrapper {

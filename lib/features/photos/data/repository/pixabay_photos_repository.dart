@@ -2,7 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:pixabay_test_app/app/data/dio_container.dart';
-import 'package:pixabay_test_app/app/domain/app_exception.dart';
+import 'package:pixabay_test_app/app/domain/model/app_exception.dart';
 import 'package:pixabay_test_app/features/photos/data/model/photo_dto.dart';
 import 'package:pixabay_test_app/features/photos/domain/model/photo_entity.dart';
 import 'package:pixabay_test_app/features/photos/domain/model/photos_repository.dart';

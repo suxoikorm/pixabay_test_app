@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pixabay_test_app/app/di/di.dart';
-import 'package:pixabay_test_app/app/domain/app_store.dart';
+import 'package:pixabay_test_app/app/domain/bloc/app_store.dart';
 import 'package:pixabay_test_app/features/auth/data/repository/mock_auth_repository.dart';
-import 'package:pixabay_test_app/app/domain/app_exception.dart';
+import 'package:pixabay_test_app/app/domain/model/app_exception.dart';
 import 'package:pixabay_test_app/features/auth/domain/model/auth_repository.dart';
 import 'package:pixabay_test_app/features/auth/domain/model/registration_state.dart';
 
