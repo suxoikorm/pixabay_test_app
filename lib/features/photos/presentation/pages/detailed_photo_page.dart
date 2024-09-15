@@ -21,23 +21,21 @@ class DetailedPhotoPage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         children: [
-          Flexible(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              clipBehavior: Clip.antiAlias,
-              child: CachedNetworkImage(
-                imageUrl: photo.imageUrl,
-                placeholder: (context, url) {
-                  return const Padding(
-                    padding: EdgeInsets.all(32),
-                    child: Center(
-                      child: CircularProgressIndicator(),
-                    ),
-                  );
-                },
-              ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            clipBehavior: Clip.antiAlias,
+            child: CachedNetworkImage(
+              imageUrl: photo.imageUrl,
+              placeholder: (context, url) {
+                return const Padding(
+                  padding: EdgeInsets.all(32),
+                  child: Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              },
             ),
           ),
           const SizedBox(height: 8),
