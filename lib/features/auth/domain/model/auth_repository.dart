@@ -7,5 +7,6 @@ abstract class AuthRepository {
   Future<String> registration({
     required String email,
     required String password,
+    required int age,
   });
 }

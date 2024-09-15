@@ -13,6 +13,6 @@ class EmailValidator {
       return 'Enter email';
     }
 
-    return !regex.hasMatch(value) ? 'Email is not valid' : null;
+    return !regex.hasMatch(value.toLowerCase()) ? 'Email is not valid' : null;
   }
 }

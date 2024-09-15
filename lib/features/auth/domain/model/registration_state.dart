@@ -1,14 +1,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'login_state.freezed.dart';
+part 'registration_state.freezed.dart';
 
 @freezed
-class LoginState with _$LoginState {
-  const factory LoginState({
+class RegistrationState with _$RegistrationState {
+  const factory RegistrationState({
     @Default('') String email,
     @Default('') String password,
     @Default(false) bool isLoading,
     @Default(false) bool isSuccessful,
+    int? age,
     String? errorMessage,
-  }) = _LoginState;
+  }) = _RegistrationState;
 }
