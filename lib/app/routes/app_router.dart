@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-
-final appRouter = AppRouter();
+import 'package:pixabay_test_app/app/routes/app_router.gr.dart';
+import 'package:pixabay_test_app/app/routes/guards/auth_guard.dart';
+import 'package:pixabay_test_app/features/photos/detailed_photo_page.dart';
 
 @AutoRouterConfig()
 class AppRouter extends RootStackRouter {
@@ -9,13 +9,14 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes => [
         AutoRoute(
           initial: true,
-          path: '/',
+          path: '/main',
           page: MainRoute.page,
-          guards: const [
-            //AuthGuard(),
+          guards: [
+            AuthGuard(),
           ],
         ),
-        // AutoRoute(path: '/login', page: LoginRoute.page),
-        // AutoRoute(path: '/registration', page: SearchRoute.page),
+        AutoRoute(path: '/login', page: LoginRoute.page),
+        AutoRoute(path: '/registration', page: RegistrationRoute.page),
+        AutoRoute(path: '/photo', page: DetailedPhotoRoute.page),
       ];
 }
