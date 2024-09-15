@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pixabay_test_app/app/di/di.dart';
 import 'package:pixabay_test_app/app/routes/app_router.gr.dart';
-import 'package:pixabay_test_app/features/auth/domain/auth_repository.dart';
-import 'package:pixabay_test_app/features/auth/domain/login_cubit.dart';
-import 'package:pixabay_test_app/features/auth/domain/login_state.dart';
+import 'package:pixabay_test_app/features/auth/domain/bloc/login_cubit.dart';
+import 'package:pixabay_test_app/features/auth/domain/model/auth_repository.dart';
+import 'package:pixabay_test_app/features/auth/domain/model/login_state.dart';
 import 'package:pixabay_test_app/utils/email_validator.dart';
 
 @RoutePage()
@@ -18,7 +18,7 @@ class LoginPage extends StatefulWidget implements AutoRouteWrapper {
   @override
   Widget wrappedRoute(BuildContext context) {
     return BlocProvider(
-      create: (context) => LoginCubit(getIt.get <AuthRepository>()),
+      create: (context) => LoginCubit(getIt.get<AuthRepository>()),
       child: this,
     );
   }

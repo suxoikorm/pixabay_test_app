@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:pixabay_test_app/features/photos/domain/photo_entity.dart';
+import 'package:pixabay_test_app/features/photos/domain/model/photo_entity.dart';
 
 class AuthorView extends StatelessWidget {
   const AuthorView(this.photo, {super.key});

@@ -10,11 +10,11 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i5;
 import 'package:flutter/material.dart' as _i7;
-import 'package:pixabay_test_app/features/auth/presentation/login_page.dart'
+import 'package:pixabay_test_app/features/auth/presentation/pages/login_page.dart'
     as _i2;
-import 'package:pixabay_test_app/features/auth/presentation/registration_page.dart'
+import 'package:pixabay_test_app/features/auth/presentation/pages/registration_page.dart'
     as _i4;
-import 'package:pixabay_test_app/features/photos/domain/photo_entity.dart'
+import 'package:pixabay_test_app/features/photos/domain/model/photo_entity.dart'
     as _i6;
 import 'package:pixabay_test_app/features/photos/presentation/pages/detailed_photo_page.dart'
     as _i1;

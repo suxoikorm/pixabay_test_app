@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:pixabay_test_app/features/photos/domain/photo_entity.dart';
+import 'package:pixabay_test_app/features/photos/domain/model/photo_entity.dart';
 import 'package:pixabay_test_app/features/photos/presentation/components/author_view.dart';
 import 'package:pixabay_test_app/features/photos/presentation/components/photo_info_row.dart';
 import 'package:pixabay_test_app/features/photos/presentation/components/photo_size_view.dart';

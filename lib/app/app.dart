@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pixabay_test_app/app/di/di.dart';
+import 'package:pixabay_test_app/app/domain/app_store.dart';
 import 'package:pixabay_test_app/app/routes/app_router.dart';
 
 class App extends StatelessWidget {
@@ -8,8 +11,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: _appRouter.config(),
+    return BlocProvider(
+      create: (context) => getIt.get<AppStore>(),
+      child: MaterialApp.router(
+        routerConfig: _appRouter.config(),
+      ),
     );
   }
 }

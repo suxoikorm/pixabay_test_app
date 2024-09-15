@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:pixabay_test_app/features/auth/domain/auth_repository.dart';
+import 'package:pixabay_test_app/features/auth/domain/model/auth_repository.dart';
 
 @Injectable(as: AuthRepository)
 class PixabayPhotosRepository implements AuthRepository {

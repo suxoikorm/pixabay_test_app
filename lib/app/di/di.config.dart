@@ -11,10 +11,11 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
-import '../../features/auth/data/mock_auth_repository.dart' as _i351;
-import '../../features/auth/domain/auth_repository.dart' as _i996;
-import '../../features/photos/data/pixabay_photos_repository.dart' as _i492;
-import '../../features/photos/domain/photos_repository.dart' as _i624;
+import '../../features/auth/data/repository/mock_auth_repository.dart' as _i207;
+import '../../features/auth/domain/model/auth_repository.dart' as _i187;
+import '../../features/photos/data/repository/pixabay_photos_repository.dart'
+    as _i443;
+import '../../features/photos/domain/model/photos_repository.dart' as _i861;
 import '../data/dio_container.dart' as _i227;
 import '../domain/app_store.dart' as _i743;
 
@@ -31,7 +32,7 @@ _i174.GetIt $initGetIt(
   );
   gh.singleton<_i227.DioContainer>(() => _i227.DioContainer());
   gh.singleton<_i743.AppStore>(() => _i743.AppStore());
-  gh.factory<_i624.PhotosRepository>(() => _i492.PixabayPhotosRepository());
-  gh.factory<_i996.AuthRepository>(() => _i351.PixabayPhotosRepository());
+  gh.factory<_i861.PhotosRepository>(() => _i443.PixabayPhotosRepository());
+  gh.factory<_i187.AuthRepository>(() => _i207.PixabayPhotosRepository());
   return getIt;
 }

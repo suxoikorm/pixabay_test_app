@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pixabay_test_app/app/di/di.dart';
 import 'package:pixabay_test_app/app/domain/app_store.dart';
 import 'package:pixabay_test_app/app/routes/app_router.gr.dart';
-import 'package:pixabay_test_app/features/photos/domain/photos_cubit.dart';
-import 'package:pixabay_test_app/features/photos/domain/photos_repository.dart';
-import 'package:pixabay_test_app/features/photos/domain/photos_state.dart';
+import 'package:pixabay_test_app/features/photos/domain/bloc/photos_cubit.dart';
+import 'package:pixabay_test_app/features/photos/domain/model/photos_repository.dart';
+import 'package:pixabay_test_app/features/photos/domain/model/photos_state.dart';
 import 'package:pixabay_test_app/features/photos/presentation/components/photo_item.dart';
 
 @RoutePage()

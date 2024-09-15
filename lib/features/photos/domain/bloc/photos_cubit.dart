@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pixabay_test_app/features/photos/domain/photos_repository.dart';
-import 'package:pixabay_test_app/features/photos/domain/photos_state.dart';
+import 'package:pixabay_test_app/features/photos/domain/model/photos_repository.dart';
+import 'package:pixabay_test_app/features/photos/domain/model/photos_state.dart';
 
 class PhotosCubit extends Cubit<PhotosState> {
   PhotosCubit(this.repository) : super(const PhotosState());

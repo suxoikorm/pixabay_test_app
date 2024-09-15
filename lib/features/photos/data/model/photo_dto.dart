@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pixabay_test_app/features/photos/domain/photo_entity.dart';
+import 'package:pixabay_test_app/features/photos/domain/model/photo_entity.dart';
 
 part 'photo_dto.g.dart';
 
