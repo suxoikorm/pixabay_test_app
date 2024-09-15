@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:pixabay_test_app/app/routes/app_router.gr.dart';
-import 'package:pixabay_test_app/features/main/domain/photo_entity.dart';
+import 'package:pixabay_test_app/features/photos/domain/photo_entity.dart';
 
 class PhotoItem extends StatelessWidget {
   const PhotoItem(this.photo, {super.key});

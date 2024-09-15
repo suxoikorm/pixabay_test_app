@@ -10,12 +10,16 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i5;
 import 'package:flutter/material.dart' as _i7;
-import 'package:pixabay_test_app/features/auth/login_page.dart' as _i2;
-import 'package:pixabay_test_app/features/auth/registration_page.dart' as _i4;
-import 'package:pixabay_test_app/features/main/domain/photo_entity.dart' as _i6;
-import 'package:pixabay_test_app/features/main/main_page.dart' as _i3;
-import 'package:pixabay_test_app/features/photos/detailed_photo_page.dart'
+import 'package:pixabay_test_app/features/auth/presentation/login_page.dart'
+    as _i2;
+import 'package:pixabay_test_app/features/auth/presentation/registration_page.dart'
+    as _i4;
+import 'package:pixabay_test_app/features/photos/domain/photo_entity.dart'
+    as _i6;
+import 'package:pixabay_test_app/features/photos/presentation/pages/detailed_photo_page.dart'
     as _i1;
+import 'package:pixabay_test_app/features/photos/presentation/pages/photos_page.dart'
+    as _i3;
 
 /// generated route for
 /// [_i1.DetailedPhotoPage]
@@ -77,26 +81,26 @@ class LoginRoute extends _i5.PageRouteInfo<void> {
   static _i5.PageInfo page = _i5.PageInfo(
     name,
     builder: (data) {
-      return const _i2.LoginPage();
+      return _i5.WrappedRoute(child: const _i2.LoginPage());
     },
   );
 }
 
 /// generated route for
-/// [_i3.MainPage]
-class MainRoute extends _i5.PageRouteInfo<void> {
-  const MainRoute({List<_i5.PageRouteInfo>? children})
+/// [_i3.PhotosPage]
+class PhotosRoute extends _i5.PageRouteInfo<void> {
+  const PhotosRoute({List<_i5.PageRouteInfo>? children})
       : super(
-          MainRoute.name,
+          PhotosRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'MainRoute';
+  static const String name = 'PhotosRoute';
 
   static _i5.PageInfo page = _i5.PageInfo(
     name,
     builder: (data) {
-      return _i5.WrappedRoute(child: const _i3.MainPage());
+      return _i5.WrappedRoute(child: const _i3.PhotosPage());
     },
   );
 }

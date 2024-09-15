@@ -9,7 +9,7 @@ class AppRouter extends RootStackRouter {
         AutoRoute(
           initial: true,
           path: '/main',
-          page: MainRoute.page,
+          page: PhotosRoute.page,
           guards: [
             AuthGuard(),
           ],
