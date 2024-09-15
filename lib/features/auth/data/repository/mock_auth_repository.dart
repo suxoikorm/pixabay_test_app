@@ -37,6 +37,7 @@ class PixabayPhotosRepository implements AuthRepository {
     });
   }
 
+  /// Mock api request to registration
   @override
   Future<String> registration({
     required String email,

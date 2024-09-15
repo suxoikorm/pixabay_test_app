@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                       hintText: 'Email',
                     ),
                     onChanged: context.read<LoginCubit>().setEmail,
-                    validator: EmailValidator.validate,
+                    validator: Validator.validateEmail,
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
@@ -72,12 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                     onChanged: context.read<LoginCubit>().setPassword,
                     obscureText: true,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) return 'Enter password';
-                      if (value.length < 6) return 'Password is too short';
-                      if (value.length > 12) return 'Password is too long';
-                      return null;
-                    },
+                    validator: Validator.validatePassword,
                   ),
                   if (state.errorMessage?.isNotEmpty == true)
                     Padding(

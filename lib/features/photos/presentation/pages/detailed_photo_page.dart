@@ -79,7 +79,7 @@ class DetailedPhotoPage extends StatelessWidget {
           if (photo.downloadsCount != null)
             PhotoInfoRow(
               label: 'Downloads',
-              value: photo.viewsCount.toString(),
+              value: photo.downloadsCount.toString(),
             ),
         ],
       ),

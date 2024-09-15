@@ -57,7 +57,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       hintText: 'Email',
                     ),
                     onChanged: context.read<RegistrationCubit>().setEmail,
-                    validator: EmailValidator.validate,
+                    validator: Validator.validateEmail,
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
@@ -72,12 +72,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     ],
                     onChanged: context.read<RegistrationCubit>().setPassword,
                     obscureText: true,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) return 'Enter password';
-                      if (value.length < 6) return 'Password is too short';
-                      if (value.length > 12) return 'Password is too long';
-                      return null;
-                    },
+                    validator: Validator.validatePassword,
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
@@ -92,13 +87,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       FilteringTextInputFormatter.digitsOnly,
                     ],
                     onChanged: context.read<RegistrationCubit>().setAge,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) return 'Enter your age';
-                      final int? age = int.tryParse(value);
-                      if (age == null) return 'Please use numbers only';
-                      if (age < 18 || age > 99) return 'Sorry, you can\'t use the app';
-                      return null;
-                    },
+                    validator: Validator.validateAge,
                   ),
                   if (state.errorMessage?.isNotEmpty == true)
                     Padding(
