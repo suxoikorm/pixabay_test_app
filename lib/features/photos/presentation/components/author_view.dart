@@ -13,21 +13,34 @@ class AuthorView extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.symmetric(vertical: 4),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (photo.userImageUrl != null)
-              Padding(
-                padding: const EdgeInsets.only(right: 8),
-                child: CircleAvatar(
-                  backgroundImage: CachedNetworkImageProvider(
-                    photo.userImageUrl!,
+            const Text('Author:'),
+            const SizedBox(width: 8),
+            Flexible(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  if (photo.userImageUrl != null)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: CircleAvatar(
+                        backgroundImage: CachedNetworkImageProvider(
+                          photo.userImageUrl!,
+                        ),
+                      ),
+                    ),
+                  Flexible(
+                    child: Text(
+                      photo.userName!,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            Text(
-              photo.userName!,
-              style: const TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 18,
+                ],
               ),
             ),
           ],

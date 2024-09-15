@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:pixabay_test_app/features/auth/domain/model/app_exception.dart';
+import 'package:pixabay_test_app/app/domain/app_exception.dart';
 import 'package:pixabay_test_app/features/auth/domain/model/auth_repository.dart';
 
 @Injectable(as: AuthRepository)
@@ -57,7 +57,7 @@ class PixabayPhotosRepository implements AuthRepository {
       );
     }).catchError((error, trace) {
       if (error is DioException && error.response?.statusCode == 400) {
-        throw InvalidRegistrationData('Invalid registration data');
+        throw InvalidRegistrationData('Invalid registration data.');
       }
 
       if (error is DioException) {
@@ -70,13 +70,9 @@ class PixabayPhotosRepository implements AuthRepository {
 }
 
 class UnauthorizedException extends AppException {
-  UnauthorizedException([super.message = 'User is not authorized']);
-}
-
-class UnknownException extends AppException {
-  UnknownException([super.message]);
+  UnauthorizedException([super.message = 'User is not authorized.']);
 }
 
 class InvalidRegistrationData extends AppException {
-  InvalidRegistrationData([super.message = 'Invalid registration data']);
+  InvalidRegistrationData([super.message = 'Invalid registration data.']);
 }
