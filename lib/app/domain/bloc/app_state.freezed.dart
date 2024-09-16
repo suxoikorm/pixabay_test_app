@@ -96,8 +96,8 @@ class __$$AppStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppStateImpl implements _AppState {
-  const _$AppStateImpl({this.token});
+class _$AppStateImpl extends _AppState {
+  const _$AppStateImpl({this.token}) : super._();
 
   @override
   final String? token;
@@ -127,8 +127,9 @@ class _$AppStateImpl implements _AppState {
       __$$AppStateImplCopyWithImpl<_$AppStateImpl>(this, _$identity);
 }
 
-abstract class _AppState implements AppState {
+abstract class _AppState extends AppState {
   const factory _AppState({final String? token}) = _$AppStateImpl;
+  const _AppState._() : super._();
 
   @override
   String? get token;

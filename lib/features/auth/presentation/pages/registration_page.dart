@@ -7,7 +7,7 @@ import 'package:pixabay_test_app/app/routes/app_router.gr.dart';
 import 'package:pixabay_test_app/features/auth/domain/bloc/registration_cubit.dart';
 import 'package:pixabay_test_app/features/auth/domain/bloc/registration_state.dart';
 import 'package:pixabay_test_app/features/auth/domain/repository/auth_repository.dart';
-import 'package:pixabay_test_app/features/auth/presentation/components/app_button.dart';
+import 'package:pixabay_test_app/features/auth/presentation/components/auth_button.dart';
 import 'package:pixabay_test_app/utils/validator.dart';
 
 @RoutePage()
@@ -100,7 +100,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   const SizedBox(height: 8),
                   if (state.isLoading) const CircularProgressIndicator(),
                   if (!state.isLoading)
-                    AppButton(
+                    AuthButton(
                       onPressed: () {
                         if (_registrationFormKey.currentState!.validate()) {
                           context.read<RegistrationCubit>().registration();
@@ -109,7 +109,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       label: 'Registration',
                     ),
                   const Divider(height: 32),
-                  AppButton(
+                  AuthButton(
                     onPressed: () {
                       context.router.maybePop();
                     },

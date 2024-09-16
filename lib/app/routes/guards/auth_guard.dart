@@ -7,9 +7,9 @@ class AuthGuard extends AutoRouteGuard {
 
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) {
-    final token = getIt.get<AppStore>().state.token;
+    final isUserAuthorized = getIt.get<AppStore>().state.isUserAuthorized;
 
-    if (token?.isNotEmpty == true) {
+    if (isUserAuthorized) {
       resolver.next();
     } else {
       router.push(const LoginRoute());
