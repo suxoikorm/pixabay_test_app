@@ -17,7 +17,7 @@ import '../../features/photos/data/repository/pixabay_photos_repository.dart'
     as _i443;
 import '../../features/photos/domain/model/photos_repository.dart' as _i861;
 import '../data/dio_container.dart' as _i227;
-import '../domain/app_store.dart' as _i743;
+import '../domain/bloc/app_store.dart' as _i209;
 
 // initializes the registration of main-scope dependencies inside of GetIt
 _i174.GetIt $initGetIt(
@@ -31,7 +31,7 @@ _i174.GetIt $initGetIt(
     environmentFilter,
   );
   gh.singleton<_i227.DioContainer>(() => _i227.DioContainer());
-  gh.singleton<_i743.AppStore>(() => _i743.AppStore());
+  gh.singleton<_i209.AppStore>(() => _i209.AppStore());
   gh.factory<_i861.PhotosRepository>(() => _i443.PixabayPhotosRepository());
   gh.factory<_i187.AuthRepository>(() => _i207.PixabayPhotosRepository());
   return getIt;

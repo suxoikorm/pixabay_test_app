@@ -13,6 +13,7 @@ dependencies:
   # Model
   freezed_annotation: 2.4.4
   json_annotation: 4.9.0
+  equatable: 2.0.5
 
   # Bloc
   flutter_bloc: 8.1.1

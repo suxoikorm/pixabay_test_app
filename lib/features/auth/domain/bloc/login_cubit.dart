@@ -3,8 +3,8 @@ import 'package:pixabay_test_app/app/di/di.dart';
 import 'package:pixabay_test_app/app/domain/bloc/app_store.dart';
 import 'package:pixabay_test_app/features/auth/data/repository/mock_auth_repository.dart';
 import 'package:pixabay_test_app/app/domain/model/app_exception.dart';
-import 'package:pixabay_test_app/features/auth/domain/model/auth_repository.dart';
-import 'package:pixabay_test_app/features/auth/domain/model/login_state.dart';
+import 'package:pixabay_test_app/features/auth/domain/bloc/login_state.dart';
+import 'package:pixabay_test_app/features/auth/domain/repository/auth_repository.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit(this.repository) : super(const LoginState());

@@ -5,9 +5,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pixabay_test_app/app/di/di.dart';
 import 'package:pixabay_test_app/app/routes/app_router.gr.dart';
 import 'package:pixabay_test_app/features/auth/domain/bloc/login_cubit.dart';
-import 'package:pixabay_test_app/features/auth/domain/model/auth_repository.dart';
-import 'package:pixabay_test_app/features/auth/domain/model/login_state.dart';
-import 'package:pixabay_test_app/ui/app_button.dart';
+import 'package:pixabay_test_app/features/auth/domain/bloc/login_state.dart';
+import 'package:pixabay_test_app/features/auth/domain/repository/auth_repository.dart';
+import 'package:pixabay_test_app/features/auth/presentation/components/app_button.dart';
 import 'package:pixabay_test_app/utils/validator.dart';
 
 @RoutePage()

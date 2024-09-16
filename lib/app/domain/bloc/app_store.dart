@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:pixabay_test_app/app/domain/model/app_state.dart';
+import 'package:pixabay_test_app/app/domain/bloc/app_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const String kTokenKey = 'token';
