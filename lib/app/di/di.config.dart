@@ -12,7 +12,7 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
 import '../../features/auth/data/repository/mock_auth_repository.dart' as _i207;
-import '../../features/auth/domain/model/auth_repository.dart' as _i187;
+import '../../features/auth/domain/repository/auth_repository.dart' as _i961;
 import '../../features/photos/data/repository/pixabay_photos_repository.dart'
     as _i443;
 import '../../features/photos/domain/model/photos_repository.dart' as _i861;
@@ -32,7 +32,7 @@ _i174.GetIt $initGetIt(
   );
   gh.singleton<_i227.DioContainer>(() => _i227.DioContainer());
   gh.singleton<_i209.AppStore>(() => _i209.AppStore());
+  gh.factory<_i961.AuthRepository>(() => _i207.PixabayPhotosRepository());
   gh.factory<_i861.PhotosRepository>(() => _i443.PixabayPhotosRepository());
-  gh.factory<_i187.AuthRepository>(() => _i207.PixabayPhotosRepository());
   return getIt;
 }

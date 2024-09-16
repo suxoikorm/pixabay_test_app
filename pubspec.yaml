@@ -13,7 +13,6 @@ dependencies:
   # Model
   freezed_annotation: 2.4.4
   json_annotation: 4.9.0
-  equatable: 2.0.5
 
   # Bloc
   flutter_bloc: 8.1.1
@@ -45,6 +44,7 @@ dev_dependencies:
   auto_route_generator: 9.0.0
   envied_generator: 0.5.4+1
   json_serializable: 6.8.0
+  equatable: 2.0.5
 
 flutter:
   uses-material-design: true
